@@ -20,5 +20,11 @@
     line-height: 1.36;
     letter-spacing: 0.06em;
     margin: 0 auto;
+
+    @media screen and (max-width: 767px) {
+      max-width: 360px;
+      font-size: 26px;
+      line-height: 42px;
+    }
   }
 }

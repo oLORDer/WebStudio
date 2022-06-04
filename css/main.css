@@ -40,11 +40,24 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+    padding: 0;
+  }
+}
+
 .section-title {
   font-size: 36px;
   line-height: 1.5;
   text-align: center;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 28px;
+  }
 }
 
 .list {
@@ -227,12 +240,22 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  .hero__title {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 42px;
+  }
+}
+
 .descr {
   padding-bottom: 0;
 }
 
-.descr__list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .descr__list {
+    display: flex;
+  }
 }
 
 .descr__item {
@@ -256,10 +279,22 @@ body {
   color: #212121;
 }
 
+@media screen and (max-width: 767px) {
+  .descr__title {
+    text-align: center;
+  }
+}
+
 .descr__text {
   line-height: 1.71;
   color: #757575;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about {
+    display: none;
+  }
 }
 
 .about__list {
@@ -289,14 +324,33 @@ body {
   background-color: #f5f4fa;
 }
 
+.team img {
+  width: 100%;
+}
+
 .team__list {
   display: flex;
+  width: 100%;
+  margin: -15px;
+}
+
+@media screen and (max-width: 767px) {
+  .team__list {
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 .team__item {
   border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 8 * 15) / 4);
+  width: calc((100% - 8 * 15px) / 4);
   margin: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .team__item {
+    width: calc((100% - 30px));
+  }
 }
 
 .team__info {
@@ -466,16 +520,32 @@ body {
 
 .customers__list {
   display: flex;
+  flex-wrap: wrap;
   margin: -15px;
 }
 
+@media screen and (max-width: 767px) {
+  .customers__list {
+    margin: 0;
+  }
+}
+
 .customers__item {
-  width: calc((100% - 12 * 15) / 6);
+  width: calc((100% - 12 * 15px) / 6);
+  height: 92px;
   margin: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .customers__item {
+    width: calc((100% - 4 * 15px) / 2);
+  }
+}
+
 .customers__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   color: #afb1b8;
@@ -485,7 +555,6 @@ body {
   transition-property: color, outline-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 16px 32px;
 }
 
 .customers__link:hover {

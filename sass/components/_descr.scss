@@ -2,7 +2,9 @@
   padding-bottom: 0;
 
   &__list {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
   &__item {
@@ -24,6 +26,10 @@
     font-size: 14px;
     text-transform: uppercase;
     color: $secondary-title-color;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {

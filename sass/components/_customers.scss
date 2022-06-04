@@ -1,16 +1,28 @@
 .customers {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     margin: -15px;
+
+    @media screen and (max-width: 767px) {
+      margin: 0;
+    }
   }
 
   &__item {
-    width: calc((100% - 12 * 15) / 6);
+    width: calc((100% - 12 * 15px) / 6);
+    height: 92px;
     margin: 15px;
+
+    @media screen and (max-width: 767px) {
+      width: calc((100% - 4 * 15px) / 2);
+    }
   }
 
   &__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     color: #afb1b8;
@@ -20,7 +32,7 @@
     transition-property: color, outline-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 16px 32px;
+    // padding: 16px 32px;
 
     &:hover {
       color: $accent-color;
