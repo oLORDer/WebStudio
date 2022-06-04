@@ -1,0 +1,24 @@
+.about {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: calc((100% - 6 * 15) / 3);
+    margin: 15px;
+    position: relative;
+  }
+
+  &__descr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    background: rgba(47, 48, 58, 0.8);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 27px 0;
+  }
+}

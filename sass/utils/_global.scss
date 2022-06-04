@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+a::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: $font-body;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: #fff;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.accent {
+  color: $accent-color;
+}
+
+.svg-div {
+  display: inline-block;
+}

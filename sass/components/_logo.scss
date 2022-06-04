@@ -1,0 +1,16 @@
+.logo {
+  font-family: $font-logo;
+  font-size: 26px;
+  line-height: 1.19;
+  font-weight: 700;
+  color: #212121;
+
+  &--header {
+    margin-right: 93px;
+    padding: 24px 0;
+  }
+
+  &--footer {
+    color: #fff;
+  }
+}

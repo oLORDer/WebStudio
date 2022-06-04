@@ -1,0 +1,18 @@
+.btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  font-family: inherit;
+  margin: 30px auto 0 auto;
+  border-radius: 4px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}

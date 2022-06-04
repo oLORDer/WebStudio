@@ -1,0 +1,36 @@
+.customers {
+  &__list {
+    display: flex;
+    margin: -15px;
+  }
+
+  &__item {
+    width: calc((100% - 12 * 15) / 6);
+    margin: 15px;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #afb1b8;
+    outline: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, outline-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 16px 32px;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus .icon--customers {
+      outline-color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+}
