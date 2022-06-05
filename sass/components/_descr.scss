@@ -4,12 +4,20 @@
   &__list {
     @media screen and (min-width: 768px) {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 
   &__item {
-    width: calc((100% - 8 * 15) / 4);
     margin: 15px;
+    
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 4 * 15px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 8 * 15px) / 4);
+    }
   }
 
   &__image {

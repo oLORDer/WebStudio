@@ -5,10 +5,22 @@
   &--container {
     display: flex;
     align-items: baseline;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__info {
-    margin-right: 70px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
+
+    @media screen and (max-width: 480px) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -37,7 +49,13 @@
 }
 
 .join {
-  margin-right: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 60px;
+  }
 
   &__title {
     font-size: 14px;
@@ -77,6 +95,7 @@
 
 .fform {
   display: flex;
+  align-content: flex-end;
   align-items: end;
   color: #fff;
 

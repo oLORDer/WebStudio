@@ -16,14 +16,24 @@
 
 .modal {
   position: absolute;
-  min-width: 528px;
-  max-height: 581px;
   background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
   border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+  width: 528px;
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+  width: 450px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: calc(100% - 30px);
+  }
 
   &__close {
     position: absolute;

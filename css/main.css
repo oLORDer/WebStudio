@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -240,7 +240,7 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .hero__title {
     max-width: 360px;
     font-size: 26px;
@@ -255,12 +255,24 @@ body {
 @media screen and (min-width: 768px) {
   .descr__list {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .descr__item {
-  width: calc((100% - 8 * 15) / 4);
   margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .descr__item {
+    width: calc((100% - 4 * 15px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .descr__item {
+    width: calc((100% - 8 * 15px) / 4);
+  }
 }
 
 .descr__image {
@@ -330,8 +342,14 @@ body {
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  margin: -15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__list {
+    margin: -15px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -345,6 +363,12 @@ body {
   border-radius: 0px 0px 4px 4px;
   width: calc((100% - 8 * 15px) / 4);
   margin: 15px;
+}
+
+@media screen and (max-width: 1199px) {
+  .team__item {
+    width: calc((100% - 4 * 15px) / 2);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -402,8 +426,24 @@ body {
   align-items: baseline;
 }
 
-.footer__info {
-  margin-right: 70px;
+@media screen and (max-width: 480px) {
+  .footer--container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__info {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer__info {
+    margin-bottom: 60px;
+  }
 }
 
 .address {
@@ -429,8 +469,16 @@ body {
   margin-bottom: 9px;
 }
 
-.join {
-  margin-right: 93px;
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-right: 93px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .join {
+    margin-bottom: 60px;
+  }
 }
 
 .join__title {
@@ -469,6 +517,7 @@ body {
 
 .fform {
   display: flex;
+  align-content: flex-end;
   align-items: end;
   color: #fff;
 }
@@ -534,6 +583,12 @@ body {
   width: calc((100% - 12 * 15px) / 6);
   height: 92px;
   margin: 15px;
+}
+
+@media screen and (max-width: 1199px) {
+  .customers__item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -695,14 +750,30 @@ body {
 
 .modal {
   position: absolute;
-  min-width: 528px;
-  max-height: 581px;
   background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
   border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 528px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal {
+    width: calc(100% - 30px);
+  }
 }
 
 .modal__close {

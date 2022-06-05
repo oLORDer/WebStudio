@@ -7,9 +7,13 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    margin: -15px;
     
+    @media screen and (min-width: 1200px) {
+      margin: -15px;
+    }
+
     @media screen and (max-width: 767px) {
       flex-direction: column;
       margin: 0;
@@ -20,6 +24,10 @@
     border-radius: 0px 0px 4px 4px;
     width: calc((100% - 8 * 15px) / 4);
     margin: 15px;
+
+    @media screen and (max-width: 1199px) {
+      width: calc((100% - 4 * 15px) / 2);
+    }
 
     @media screen and (max-width: 767px) {
       width: calc((100% - 30px));
