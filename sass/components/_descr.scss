@@ -1,18 +1,22 @@
 .descr {
-  padding-bottom: 0;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 
   &__list {
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
+      margin: -15px;
     }
   }
 
   &__item {
-    margin: 15px;
     
     @media screen and (min-width: 768px) {
       width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -34,6 +38,7 @@
     font-size: 14px;
     text-transform: uppercase;
     color: $secondary-title-color;
+    margin-bottom: 10px;
 
     @media screen and (max-width: 767px) {
       text-align: center;
@@ -43,6 +48,5 @@
   &__text {
     line-height: 1.71;
     color: $main-text-color;
-    margin-top: 10px;
   }
 }

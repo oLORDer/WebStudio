@@ -5,7 +5,49 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
+}
+
+@media screen and (max-width: 767px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu {
+    display: flex;
+    width: 100%;
+    // justify-content: space-between;
+  }
+
+  .nav {
+
+  }
+
+  .contacts {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  .contacts__link--header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.header__menu.is-open {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 5;
 }
 
 .nav {
@@ -14,7 +56,14 @@
 }
 
 .navlist {
-  display: flex;
+  @media screen and (min-width: 678px) {
+    display: flex;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    letter-spacing: 0.02em;
+  }
 
   &__link {
     padding: 32px 0;
@@ -38,26 +87,30 @@
   }
 }
 
-.checked {
-  color: #2196f3;
-  position: relative;
+@media screen and (min-width: 768px) {
+  .checked {
+    color: #2196f3;
+    position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: $accent-color;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+    }
   }
 }
 
 .contacts {
   display: flex;
 
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: 1200px) {
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 
   &__link {
@@ -69,7 +122,9 @@
   }
 
   &__link--header {
-    padding: 32px 0;
+    @media screen and (min-width: 1200px) {
+      padding: 32px 0;
+    }
   }
 
   &__link {
@@ -92,5 +147,77 @@
 
   &--contacts {
     margin-right: 10px;
+  }
+}
+
+// burger
+
+.menu-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 10;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-btn .icon-cross {
+  display: none;
+}
+
+.menu-btn.is-open .icon-cross {
+  display: block;
+}
+
+.menu-btn.is-open .icon-burger {
+  display: none;
+}
+
+.menu-social {
+  display: none;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    flex-direction: column-reverse;
+    margin-top: auto;
+  }
+
+  .contacts-phone {
+    font-size: 34px;
+    color: $accent-color;
+  }
+
+  .contacts-email {
+    font-size: 24px;
+  }
+
+  .menu-social {
+    display: flex;
+  }
+
+  .menu-social__item:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  .menu-social__item:not(:first-child) {
+    padding-left: 10px;
+  }
+
+  .menu-social__link {
+    color: $accent-color;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: block;
   }
 }

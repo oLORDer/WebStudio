@@ -26,11 +26,20 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   background-color: #fff;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) { 
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .container {
@@ -41,7 +50,10 @@ body {
 
   @media screen and (max-width: 767px) { 
     max-width: 480px;
-    padding: 0;
+  }
+
+  @media screen and (max-width: 1199px) { 
+    max-width: 768px;
   }
 }
 
