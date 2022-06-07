@@ -39,7 +39,8 @@
 }
 
 .header__menu.is-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
