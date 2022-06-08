@@ -19,6 +19,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -36,7 +38,7 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 
-  @media screen and (max-width: 1199px) { 
+  @media screen and (max-width: 1199px) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -48,11 +50,11 @@ body {
   padding-right: 15px;
   margin: 0 auto;
 
-  @media screen and (max-width: 767px) { 
+  @media screen and (max-width: 767px) {
     max-width: 480px;
   }
 
-  @media screen and (max-width: 1199px) { 
+  @media screen and (max-width: 1199px) {
     max-width: 768px;
   }
 }

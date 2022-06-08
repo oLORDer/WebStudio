@@ -22,14 +22,14 @@
     // justify-content: space-between;
   }
 
-  .nav {
-
-  }
-
   .contacts {
     flex-direction: column;
     justify-content: center;
     margin-left: auto;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
   }
 
   .contacts__link--header {
@@ -200,6 +200,7 @@
   .contacts-phone {
     font-size: 34px;
     color: $accent-color;
+    margin-bottom: 32px;
   }
 
   .contacts-email {

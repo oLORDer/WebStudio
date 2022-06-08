@@ -61,7 +61,7 @@
           </ul>
         </div>
 
-        <button class="menu-btn is-open" type="button" data-menu-button aria-expanded="false">
+        <button class="menu-btn" type="button" data-menu-button aria-expanded="false">
           <svg width="40" height="40" aria-label="переключатель мобильного меню">
             <use class="icon-burger" href="./images/icons/symbol-defs.svg#icon-burger"></use>
             <use class="icon-cross" href="./images/icons/symbol-defs.svg#icon-close"></use>
@@ -145,27 +145,45 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list about__list">
             <li class="about__item">
-              <img
-                src="./images/whatWeDo-1.jpg"
+              <picture>
+                <source
+                  srcset="../images/about/about1-l.jpg 1x, ./images/about/about1-l@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                src="./images/about/about1-l.jpg"
                 alt="человек пишет код"
                 width="370"
               />
+              </picture>
               <p class="about__descr">Десктопные приложения</p>
             </li>
             <li class="about__item">
-              <img
-                src="./images/whatWeDo-2.jpg"
+              <picture>
+                <source
+                  srcset="../images/about/about2-l.jpg 1x, ./images/about/about2-l@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                src="../images/about/about2-l.jpg"
                 alt="дизайнер рисует аддаптив для телефона"
                 width="370"
               />
+              </picture>
               <p class="about__descr">Мобильные приложения</p>
             </li>
             <li class="about__item">
-              <img
-                src="./images/whatWeDo-3.jpg"
+              <picture>
+                <source
+                  srcset="../images/about/about3-l.jpg 1x, ./images/about/about2-l@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                src="../images/about/about3-l.jpg"
                 alt="дизайнер рисует"
                 width="370"
               />
+              </picture>
               <p class="about__descr">Дизайнерские решения</p>
             </li>
           </ul>
@@ -178,11 +196,25 @@
 
           <ul class="list team__list">
             <li class="team__item">
-              <img
-                src="./images/team-1.jpg"
+              <picture>
+                <source
+                  srcset="./images/team/team1-l.jpg 1x, ./images/team/team1-l@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/team1-m.jpg 1x, ./images/team/team1-m@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/team1-s.jpg 1x, ./images/team/team1-s@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/team/team1-s.jpg"
                 alt="мужчина улыбается"
                 width="270"
               />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__position">Product Designer</p>
@@ -220,11 +252,25 @@
             </li>
 
             <li class="team__item">
-              <img
-                src="./images/team-2.jpg"
-                alt="девушка улибается"
+              <picture>
+                <source
+                  srcset="./images/team/team2-l.jpg 1x, ./images/team/team2-l@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/team2-m.jpg 1x, ./images/team/team2-m@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/team2-s.jpg 1x, ./images/team/team2-s@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/team/team2-s.jpg"
+                alt="человек улыбается"
                 width="270"
               />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__position">Frontend Developer</p>
@@ -262,11 +308,25 @@
             </li>
 
             <li class="team__item">
-              <img
-                src="./images/team-3.jpg"
-                alt="мужчина улибается"
+              <picture>
+                <source
+                  srcset="./images/team/team3-l.jpg 1x, ./images/team/team3-l@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/team3-m.jpg 1x, ./images/team/team3-m@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/team3-s.jpg 1x, ./images/team/team3-s@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/team/team3-s.jpg"
+                alt="человек улыбается"
                 width="270"
               />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__position">Marketing</p>
@@ -304,11 +364,25 @@
             </li>
 
             <li class="team__item">
-              <img
-                src="./images/team-4.jpg"
-                alt="мужчина ухмыляется"
+              <picture>
+                <source
+                  srcset="./images/team/team4-l.jpg 1x, ./images/team/team4-l@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/team4-m.jpg 1x, ./images/team/team4-m@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/team4-s.jpg 1x, ./images/team/team4-s@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/team/team4-s.jpg"
+                alt="человек улыбается"
                 width="270"
               />
+              </picture>
               <div class="team__info">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__position">UI Designer</p>
