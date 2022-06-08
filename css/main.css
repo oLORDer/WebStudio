@@ -542,10 +542,18 @@ img {
   background-color: transparent;
 }
 
+.menu-btn:hover {
+  color: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
   .menu-btn {
     display: none;
   }
+}
+
+.icon-menu {
+  fill: currentColor;
 }
 
 .menu-btn .icon-cross {
@@ -1051,6 +1059,7 @@ img {
   .footer--container {
     justify-content: center;
     flex-wrap: wrap;
+    padding: 60px 76px;
   }
 }
 
