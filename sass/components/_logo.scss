@@ -6,15 +6,15 @@
   color: #212121;
 
   &--header {
+    padding: 18px 0;
     @media screen and (min-width: 768px) {
       margin-right: 88px;
+      padding: 24px 0;
     }
 
     @media screen and (min-width: 1200px) {
       margin-right: 93px;
     }
-    
-    padding: 24px 0;
   }
 
   &--footer {

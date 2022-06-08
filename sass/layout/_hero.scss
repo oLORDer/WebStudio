@@ -2,8 +2,8 @@
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2f303a;
-  padding: 200px 0;
   background-size: cover;
+  padding: 118px 0;
 
   background-image: linear-gradient(
       to top,
@@ -46,6 +46,7 @@
         rgba(47, 48, 58, 0.4)
       ),
       url('../images/hero/bg-l.jpg');
+      padding: 200px 0;
 
     @include mq(retina) {
       background-image: linear-gradient(

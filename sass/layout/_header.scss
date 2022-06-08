@@ -64,11 +64,13 @@
   @media screen and (max-width: 767px) {
     font-size: 40px;
     letter-spacing: 0.02em;
+    flex-direction: column;
   }
 
   &__link {
     padding: 16px 0;
-    @media screen and (min-width: 1200px) {
+
+    @media screen and (min-width: 768px) {
       padding: 32px 0;
     }
     display: block;
@@ -144,6 +146,17 @@
       color: $accent-color;
     }
   }
+
+  &-phone {
+
+    @media screen and (max-width: 424px) {
+      font-size: 26px;
+    }
+
+    @media screen and (min-width: 425px) and (max-width: 767px) {
+      font-size: 34px;
+    }
+  }
 }
 
 .icon {
@@ -151,6 +164,11 @@
 
   &--contacts {
     margin-right: 10px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
 }
 
@@ -159,7 +177,7 @@
 .menu-btn {
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 15px;
   z-index: 10;
   display: inline-flex;
   padding: 0;
@@ -198,7 +216,6 @@
   }
 
   .contacts-phone {
-    font-size: 34px;
     color: $accent-color;
     margin-bottom: 32px;
   }

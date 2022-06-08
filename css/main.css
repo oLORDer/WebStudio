@@ -89,21 +89,21 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .container {
-    max-width: 480px;
+    max-width: 768px;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .container {
-    max-width: 768px;
+    max-width: 1200px;
   }
 }
 
@@ -135,12 +135,13 @@ img {
 }
 
 .logo--header {
-  padding: 24px 0;
+  padding: 18px 0;
 }
 
 @media screen and (min-width: 768px) {
   .logo--header {
     margin-right: 88px;
+    padding: 24px 0;
   }
 }
 
@@ -403,6 +404,7 @@ img {
   .navlist {
     font-size: 40px;
     letter-spacing: 0.02em;
+    flex-direction: column;
   }
 }
 
@@ -412,7 +414,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .navlist__link {
     padding: 32px 0;
   }
@@ -485,18 +487,37 @@ img {
   color: #2196f3;
 }
 
+@media screen and (max-width: 424px) {
+  .contacts-phone {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .contacts-phone {
+    font-size: 34px;
+  }
+}
+
 .icon {
   fill: currentColor;
 }
 
 .icon--contacts {
   margin-right: 10px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .icon--contacts {
+    display: block;
+  }
 }
 
 .menu-btn {
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 15px;
   z-index: 10;
   display: inline-flex;
   padding: 0;
@@ -536,7 +557,6 @@ img {
     margin-bottom: 64px;
   }
   .contacts-phone {
-    font-size: 34px;
     color: #2196f3;
     margin-bottom: 32px;
   }
@@ -565,8 +585,8 @@ img {
   max-width: 1600px;
   margin: 0 auto;
   background-color: #2f303a;
-  padding: 200px 0;
   background-size: cover;
+  padding: 118px 0;
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg-s.jpg");
 }
 
@@ -591,6 +611,7 @@ img {
 @media screen and (min-width: 1280px) {
   .hero {
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg-l.jpg");
+    padding: 200px 0;
   }
 }
 
@@ -631,6 +652,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .descr__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -840,7 +867,7 @@ img {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .portfolio__btns {
     width: 400px;
     justify-content: start;
@@ -943,17 +970,25 @@ img {
 
 .projects__overlay {
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 600px;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   color: #fff;
-  padding: 63px 24px;
-  font-size: 18px;
+  padding: 0 24px;
+  font-size: 15px;
   line-height: 1.55;
   letter-spacing: 0.03em;
   transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 375px) {
+  .projects__overlay {
+    font-size: 18px;
+  }
 }
 
 .projects__link:hover {
@@ -1017,19 +1052,13 @@ img {
 
 @media screen and (min-width: 768px) {
   .footer__info {
-    margin-right: 165px;
+    margin-right: auto;
   }
 }
 
 @media screen and (max-width: 1199px) {
   .footer__info {
     text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer__info {
-    margin-right: 60px;
   }
 }
 
