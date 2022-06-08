@@ -232,7 +232,21 @@
               <li class="projects__item">
                 <a class="projects__link" href="">
                   <div class="projects__wrap">
-                    <img class="projects__img" src="./images/proj-6.jpg" alt="монитор" width="370" />
+                    <picture>
+                      <source
+                        srcset="./images/project/l/project6-l.jpg 1x, ./images/project/l/project6-l@2x.jpg 2x"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="./images/project/m/project6-m.jpg 1x, ./images/project/m/project6-m@2x.jpg 2x"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="./images/project/s/project6-s.jpg 1x, ./images/project/s/project6-s@2x.jpg 2x"
+                        media="(max-width: 767px)"
+                      />
+                      <img class="projects__img" src="./images/project/s/project6-s.jpg" alt="ноутбук" width="370" />
+                    </picture>
                     <p class="projects__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                   </div>
                   <div class="projects__descr">
